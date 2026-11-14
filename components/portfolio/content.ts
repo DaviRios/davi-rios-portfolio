@@ -121,6 +121,9 @@ export const projects: readonly Project[] = [
 
 export const experience = [
   {
+    mark: "IL",
+    wordmark: "ilegra",
+    system: "CMS & sistemas internos",
     period: "2025 — 2026",
     company: "Ilegra",
     context: "Produtos internos",
@@ -131,8 +134,12 @@ export const experience = [
       "Correções, novas funcionalidades e redesign para diferentes departamentos",
       "Backend Java/Spring Boot, documentação e decisões de arquitetura",
     ],
+    technologies: ["Java", "Spring Boot", "React", "TypeScript"],
   },
   {
+    mark: "JD",
+    wordmark: "ilegra × John Deere",
+    system: "Pagamentos & integrações",
     period: "2025",
     company: "Ilegra · John Deere",
     context: "Produto See & Spray",
@@ -143,8 +150,12 @@ export const experience = [
       "AWS, Docker, Terraform e Jenkins no ciclo de entrega",
       "Correções em produção e colaboração técnica multidisciplinar",
     ],
+    technologies: ["Node.js", "NestJS", "AWS", "Terraform", "Jenkins"],
   },
   {
+    mark: "FT",
+    wordmark: "FITec",
+    system: "Firmware & embedded",
     period: "2022 — 2025",
     company: "FITec",
     context: "Sistemas embarcados",
@@ -155,6 +166,7 @@ export const experience = [
       "Otimização de desempenho, estabilidade e uso de recursos",
       "Testes automatizados em equipes multidisciplinares",
     ],
+    technologies: ["C/C++", "Microcontroladores", "Testes", "Hardware"],
   },
 ] as const;
 

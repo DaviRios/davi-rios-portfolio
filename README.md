@@ -59,6 +59,7 @@ public/
   favicon.svg
   card.png
   projects/         Prévias dos projetos públicos
+  tech/             Logos locais de tecnologias e contatos
 next.config.ts
 postcss.config.mjs
 tsconfig.json

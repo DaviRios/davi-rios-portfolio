@@ -2,6 +2,7 @@ const navigation = [
   ["Projetos", "#cases"],
   ["Experiência", "#experiencia"],
   ["Stack", "#habilidades"],
+  ["Sobre", "#sobre"],
   ["Contato", "#contato"],
 ] as const;
 
@@ -21,11 +22,11 @@ export function Header() {
       </a>
 
       <nav className="flex items-center gap-4 text-xs text-[#d0c9bd] sm:gap-6 md:gap-[clamp(1.2rem,3vw,2.8rem)] md:text-sm" aria-label="Navegação principal">
-        {navigation.map(([label, href], index) => (
+        {navigation.map(([label, href]) => (
           <a
             key={href}
             href={href}
-            className={`${index === 1 || index === 2 ? "hidden md:block" : "block"} transition-colors duration-200 hover:text-gold-light focus-visible:text-gold-light focus-visible:outline-none`}
+            className={`${href === "#cases" || href === "#contato" ? "block" : "hidden md:block"} transition-colors duration-200 hover:text-gold-light focus-visible:text-gold-light focus-visible:outline-none`}
           >
             {label}
           </a>
