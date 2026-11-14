@@ -1,29 +1,31 @@
+const navigation = [
+  ["Projetos", "#cases"],
+  ["Experiência", "#experiencia"],
+  ["Stack", "#habilidades"],
+  ["Contato", "#contato"],
+] as const;
+
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 flex min-h-[72px] items-center justify-between border-b border-gold/30 bg-ink/85 px-5 backdrop-blur-2xl md:min-h-[84px] md:px-[5vw]">
-      <a className="inline-flex items-center gap-3.5" href="#inicio" aria-label="Davi Rios — início">
-        <span className="grid size-10 place-items-center rounded-full border border-gold font-serif text-[1.4rem] text-gold-light">
+    <header className="sticky top-0 z-50 flex min-h-[68px] items-center justify-between border-b border-gold/25 bg-ink/[0.88] px-4 backdrop-blur-xl sm:px-6 md:min-h-[78px] md:px-[5vw]">
+      <a className="group inline-flex items-center gap-3" href="#inicio" aria-label="Davi Rios — início">
+        <span className="grid size-10 place-items-center rounded-full border border-gold font-serif text-[1.4rem] text-gold-light transition-transform duration-300 group-hover:rotate-[-8deg]">
           D
         </span>
-        <span className="grid leading-[1.12]">
-          <strong className="font-serif text-base font-medium">Davi Rios</strong>
-          <small className="text-xs font-bold tracking-[0.18em] text-gold uppercase">
-            Software Engineer
+        <span className="leading-none">
+          <strong className="block font-serif text-base font-medium">Davi Rios</strong>
+          <small className="mt-1 block text-[0.6rem] font-bold tracking-[0.2em] text-gold uppercase">
+            Full Stack Engineer
           </small>
         </span>
       </a>
 
-      <nav className="hidden items-center gap-[clamp(1.1rem,3vw,2.6rem)] text-sm text-[#cac3b7] md:flex" aria-label="Navegação principal">
-        {[
-          ["Cases", "#cases"],
-          ["Experiência", "#experiencia"],
-          ["Habilidades", "#habilidades"],
-          ["Contato", "#contato"],
-        ].map(([label, href]) => (
+      <nav className="flex items-center gap-4 text-xs text-[#d0c9bd] sm:gap-6 md:gap-[clamp(1.2rem,3vw,2.8rem)] md:text-sm" aria-label="Navegação principal">
+        {navigation.map(([label, href], index) => (
           <a
             key={href}
             href={href}
-            className="transition-colors duration-200 hover:text-gold-light focus-visible:text-gold-light focus-visible:outline-none"
+            className={`${index === 1 || index === 2 ? "hidden md:block" : "block"} transition-colors duration-200 hover:text-gold-light focus-visible:text-gold-light focus-visible:outline-none`}
           >
             {label}
           </a>
